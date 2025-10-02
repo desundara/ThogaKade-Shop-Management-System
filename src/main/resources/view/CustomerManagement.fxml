@@ -26,17 +26,17 @@
                <content>
                   <AnchorPane prefHeight="230.0" prefWidth="790.0">
                      <children>
-                        <TableView layoutX="14.0" layoutY="23.0" prefHeight="476.0" prefWidth="830.0">
+                        <TableView fx:id="tblCustManagement" layoutX="14.0" layoutY="23.0" prefHeight="476.0" prefWidth="830.0">
                           <columns>
                             <TableColumn fx:id="colCustId" prefWidth="75.0" text="Customer ID" />
-                            <TableColumn fx:id="colCustTitle" prefWidth="75.0" text="Title" />
-                              <TableColumn fx:id="colCustName" prefWidth="75.0" text="Name" />
-                              <TableColumn fx:id="colDob" prefWidth="75.0" text="DOB" />
-                              <TableColumn fx:id="colSalary" prefWidth="75.0" text="Salary" />
-                              <TableColumn fx:id="colAddress" prefWidth="75.0" text="Address" />
-                              <TableColumn fx:id="colCity" prefWidth="75.0" text="City" />
-                              <TableColumn fx:id="colProvince" prefWidth="75.0" text="Province" />
-                              <TableColumn fx:id="colPostalCode" prefWidth="75.0" text="Postal Code" />
+                            <TableColumn fx:id="colCustTitle" prefWidth="36.800018310546875" text="Title" />
+                              <TableColumn fx:id="colCustName" prefWidth="77.60000610351562" text="Name" />
+                              <TableColumn fx:id="colDob" prefWidth="75.20002746582031" text="DOB" />
+                              <TableColumn fx:id="colSalary" prefWidth="88.79998779296875" text="Salary" />
+                              <TableColumn fx:id="colAddress" prefWidth="172.800048828125" text="Address" />
+                              <TableColumn fx:id="colCity" prefWidth="104.800048828125" text="City" />
+                              <TableColumn fx:id="colProvince" prefWidth="99.199951171875" text="Province" />
+                              <TableColumn fx:id="colPostalCode" prefWidth="101.5999755859375" text="Postal Code" />
                           </columns>
                         </TableView>
                      </children>
@@ -46,7 +46,7 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="466.0" prefWidth="862.0">
                      <children>
-                        <Pane layoutX="59.0" layoutY="23.0" prefHeight="488.0" prefWidth="744.0" style="-fx-background-color: #E3F2FD;">
+                        <Pane layoutX="150.0" layoutY="19.0" prefHeight="488.0" prefWidth="561.0" style="-fx-background-color: #E3F2FD;">
                            <children>
                               <Label layoutX="51.0" layoutY="32.0" prefHeight="20.0" prefWidth="128.0" text="Customer ID :">
                                  <font>
@@ -93,22 +93,22 @@
                                     <Font name="SansSerif Bold" size="16.0" />
                                  </font>
                               </Label>
-                              <Button fx:id="btnAdd" layoutX="80.0" layoutY="426.0" mnemonicParsing="false" onAction="#btnAddOnClick" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #004aad;" text="ADD" textFill="WHITE">
+                              <Button fx:id="btnAdd" layoutX="46.0" layoutY="426.0" mnemonicParsing="false" onAction="#btnAddOnClick" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #004aad;" text="ADD" textFill="WHITE">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="btnUpdate" layoutX="251.0" layoutY="426.0" mnemonicParsing="false" onAction="#btnUpdateOnClick" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #004aad;" text="UPDATE" textFill="WHITE">
+                              <Button fx:id="btnUpdate" layoutX="169.0" layoutY="426.0" mnemonicParsing="false" onAction="#btnUpdateOnClick" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #004aad;" text="UPDATE" textFill="WHITE">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="btnClear" layoutX="581.0" layoutY="426.0" mnemonicParsing="false" onAction="#btnClearOnClick" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #004aad;" text="CLEAR" textFill="WHITE">
+                              <Button fx:id="btnClear" layoutX="417.0" layoutY="426.0" mnemonicParsing="false" onAction="#btnClearOnClick" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #004aad;" text="CLEAR" textFill="WHITE">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="btnDelete" layoutX="415.0" layoutY="426.0" mnemonicParsing="false" onAction="#btnDeleteOnClick" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #004aad;" text="DELETE" textFill="WHITE">
+                              <Button fx:id="btnDelete" layoutX="289.0" layoutY="426.0" mnemonicParsing="false" onAction="#btnDeleteOnClick" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #004aad;" text="DELETE" textFill="WHITE">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
