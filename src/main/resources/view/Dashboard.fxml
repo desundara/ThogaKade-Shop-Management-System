@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="481.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardFormControllerer">
+<AnchorPane prefHeight="481.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardFormController">
    <children>
       <Label layoutX="184.0" layoutY="47.0" prefHeight="44.0" prefWidth="447.0" text="ThogaKade Online Shop" textFill="#42a5f5">
          <font>
@@ -19,22 +19,22 @@
             <Image url="@../../../../../../../../Downloads/Thoga.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnCustManage" layoutX="408.0" layoutY="148.0" mnemonicParsing="false" onAction="#btnCustManageOnClick" prefHeight="46.0" prefWidth="318.0" style="-fx-background-color: #004aad;" text="Customer Management " textFill="WHITE">
+      <Button fx:id="btnCustManage" layoutX="408.0" layoutY="148.0" mnemonicParsing="false" onAction="#btnCustManageOnClick" prefHeight="46.0" prefWidth="318.0" style="-fx-background-color: #004aad;" text="Customer Management" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Button>
-      <Button fx:id="btnItemManage" layoutX="408.0" layoutY="214.0" mnemonicParsing="false" onAction="#btnItemManageOnClick" prefHeight="51.0" prefWidth="318.0" style="-fx-background-color: #004aad;" text="Item Management " textFill="WHITE">
+      <Button fx:id="btnItemManage" layoutX="408.0" layoutY="214.0" mnemonicParsing="false" onAction="#btnItemManageOnClick" prefHeight="51.0" prefWidth="318.0" style="-fx-background-color: #004aad;" text="Item Management" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Button>
-      <Button fx:id="btnOrderDetailManage" layoutX="408.0" layoutY="354.0" mnemonicParsing="false" onAction="#btnOrderDetailManageOnClick" prefHeight="51.0" prefWidth="318.0" style="-fx-background-color: #004aad;" text="Order Detail Management " textFill="WHITE">
+      <Button fx:id="btnOrderDetailManage" layoutX="408.0" layoutY="354.0" mnemonicParsing="false" onAction="#btnOrderDetailManageOnClick" prefHeight="51.0" prefWidth="318.0" style="-fx-background-color: #004aad;" text="Order Detail Management" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Button>
-      <Button fx:id="btnOrderManage" layoutX="408.0" layoutY="284.0" mnemonicParsing="false" onAction="#btnOrderManageOnClick" prefHeight="51.0" prefWidth="318.0" style="-fx-background-color: #004aad;" text="Order Management " textFill="WHITE">
+      <Button fx:id="btnOrderManage" layoutX="408.0" layoutY="284.0" mnemonicParsing="false" onAction="#btnOrderManageOnClick" prefHeight="51.0" prefWidth="318.0" style="-fx-background-color: #004aad;" text="Order Management" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
