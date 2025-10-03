@@ -72,17 +72,29 @@ public class ItemFormController implements Initializable {
         itemList.addAll(itemControllerService.getAllItemDetails());
         tblItemManage.setItems(itemList);
 
-
     }
 
     @FXML
     void btnAddOnClick(ActionEvent event) {
+        Item item = new Item(
+                txtItemCode.getText(),
+                txtDescription.getText(),
+                txtPackSize.getText(),
+                Double.parseDouble(txtUnitPrice.getText()),
+                Integer.parseInt(txtQty.getText())
+        );
 
+        itemControllerService.addItemDetails(item);
+        loadItemDetails();
     }
 
     @FXML
     void btnClearOnClick(ActionEvent event) {
-
+        txtItemCode.setText(null);
+        txtDescription.setText(null);
+        txtPackSize.setText(null);
+        txtUnitPrice.setText(null);
+        txtQty.setText(null);
     }
 
     @FXML

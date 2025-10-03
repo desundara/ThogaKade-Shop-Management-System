@@ -29,13 +29,22 @@ public class DashboardFormController {
 
     public void btnItemManageOnClick(ActionEvent actionEvent) {
 
-    }
-
-    public void btnOrderDetailManageOnClick(ActionEvent actionEvent) {
-
+        try {
+            itemManagement.setScene(
+                    new Scene(FXMLLoader.load(getClass().getResource("/view/ItemManagement.fxml")))
+            );
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        itemManagement.setResizable(false);
+        itemManagement.show();
     }
 
     public void btnOrderManageOnClick(ActionEvent actionEvent) {
+
+    }
+
+    public void btnOrderDetailManageOnClick(ActionEvent actionEvent) {
 
     }
 }
