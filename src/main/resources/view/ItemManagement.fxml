@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="648.0" prefWidth="899.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ItemManagement">
+<AnchorPane prefHeight="648.0" prefWidth="899.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.itemController.ItemFormController">
    <children>
       <Label layoutX="355.0" layoutY="32.0" prefHeight="36.0" prefWidth="268.0" text="Item Management" textFill="#42a5f5">
          <font>
@@ -19,7 +18,7 @@
       </Label>
       <Pane layoutX="14.0" layoutY="88.0" prefHeight="542.0" prefWidth="462.0" style="-fx-background-color: #E3F2FD;">
          <children>
-            <TableView layoutX="14.0" layoutY="25.0" prefHeight="503.0" prefWidth="436.0">
+            <TableView fx:id="tblItemManage" layoutX="14.0" layoutY="25.0" prefHeight="503.0" prefWidth="436.0">
               <columns>
                 <TableColumn fx:id="colItemCode" prefWidth="67.19998168945312" text="Item Code" />
                 <TableColumn fx:id="colDescription" prefWidth="163.19998931884766" text="Description" />
