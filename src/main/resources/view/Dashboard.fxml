@@ -19,22 +19,22 @@
             <Image url="@../../../../../../../../Downloads/Thoga.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnCustManage" layoutX="408.0" layoutY="148.0" mnemonicParsing="false" onAction="#btnCustManageOnClick" prefHeight="46.0" prefWidth="318.0" style="-fx-background-color: #004aad;" text="Customer Management" textFill="WHITE">
+      <Button fx:id="btnCustManage" layoutX="408.0" layoutY="148.0" mnemonicParsing="false" onAction="#btnCustManageOnClick" prefHeight="46.0" prefWidth="318.0" style="-fx-background-color: #004aad;" text="Customer Management " textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Button>
-      <Button fx:id="btnItemManage" layoutX="408.0" layoutY="214.0" mnemonicParsing="false" onAction="#btnItemManageOnClick" prefHeight="51.0" prefWidth="318.0" style="-fx-background-color: #004aad;" text="Item Management" textFill="WHITE">
+      <Button fx:id="btnItemManage" layoutX="408.0" layoutY="214.0" mnemonicParsing="false" onAction="#btnItemManageOnClick" prefHeight="51.0" prefWidth="318.0" style="-fx-background-color: #004aad;" text="Item Management " textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Button>
-      <Button fx:id="btnOrderDetailManage" layoutX="408.0" layoutY="354.0" mnemonicParsing="false" onAction="#btnOrderDetailManageOnClick" prefHeight="51.0" prefWidth="318.0" style="-fx-background-color: #004aad;" text="Order Detail Management" textFill="WHITE">
+      <Button fx:id="btnOrderDetailManage" layoutX="408.0" layoutY="354.0" mnemonicParsing="false" onAction="#btnOrderDetailManageOnClick" prefHeight="51.0" prefWidth="318.0" style="-fx-background-color: #004aad;" text="Order Detail Management " textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Button>
-      <Button fx:id="btnOrderManage" layoutX="408.0" layoutY="284.0" mnemonicParsing="false" onAction="#btnOrderManageOnClick" prefHeight="51.0" prefWidth="318.0" style="-fx-background-color: #004aad;" text="Order Management" textFill="WHITE">
+      <Button fx:id="btnOrderManage" layoutX="408.0" layoutY="284.0" mnemonicParsing="false" onAction="#btnOrderManageOnClick" prefHeight="51.0" prefWidth="318.0" style="-fx-background-color: #004aad;" text="Order Management " textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>

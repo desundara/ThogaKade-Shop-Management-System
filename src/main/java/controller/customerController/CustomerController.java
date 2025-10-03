@@ -4,19 +4,15 @@ package controller.customerController;
 import db.DBConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.fxml.Initializable;
 import model.Customer;
 
-import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ResourceBundle;
 
 public class CustomerController implements CustomerControllerService {
 
-    @Override
     public void addCustomerDetails(Customer customer) {
         String SQL = "INSERT INTO customer(CustID, CustTitle, CustName, DOB, salary, CustAddress, City, Province, PostalCode) VALUES(?,?,?,?,?,?,?,?,?);";
 
@@ -40,7 +36,6 @@ public class CustomerController implements CustomerControllerService {
         }
     }
 
-    @Override
     public void updateCustomerDetails(Customer customer) {
         String SQL = "UPDATE customer SET CustTitle = ?, CustName = ?, DOB = ?, salary = ?, CustAddress = ?, City = ?, Province = ?, PostalCode = ? WHERE CustID = ?";
 
@@ -63,8 +58,6 @@ public class CustomerController implements CustomerControllerService {
             throw new RuntimeException(e);
         }
     }
-
-    @Override
     public void deleteCustomerDetails(Customer customerDto) {
         String SQL = "DELETE FROM customer WHERE CustID = ?;";
 
@@ -79,7 +72,7 @@ public class CustomerController implements CustomerControllerService {
         }
     }
 
-    @Override
+
     public ObservableList<Customer> getAllCustomerDetails() {
         ObservableList<Customer> customerList = FXCollections.observableArrayList();
 

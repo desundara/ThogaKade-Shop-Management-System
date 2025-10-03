@@ -14,7 +14,13 @@ public class DBConnection {
     }
 
     public static DBConnection getInstance() throws SQLException {
-        return instance == null ? instance = new DBConnection() : instance;
+        if (instance == null) {
+            instance = new DBConnection();
+        } else if (instance.getConnection().isClosed()) {
+            // Reconnect if closed
+            instance = new DBConnection();
+        }
+        return instance;
     }
 
     public Connection getConnection() {

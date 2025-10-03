@@ -10,6 +10,10 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import model.Customer;
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class CustomerFormController implements Initializable {
@@ -91,6 +95,7 @@ public class CustomerFormController implements Initializable {
         customer.clear();
         customer = customerControllerService.getAllCustomerDetails();
         tblCustManagement.setItems(customer);
+
     }
 
     @FXML
@@ -109,11 +114,25 @@ public class CustomerFormController implements Initializable {
 
         customerControllerService.addCustomerDetails(customer);
         loadCustomerDetails();
-
     }
 
     @FXML
     public void btnUpdateOnClick(ActionEvent actionEvent) {
+
+        Customer customer = new Customer(
+                txtCustId.getText(),
+                cmbTitle.getValue(),
+                txtCustName.getText(),
+                dpDob.getValue(),
+                Double.parseDouble(txtSalary.getText()),
+                txtAddress.getText(),
+                txtCity.getText(),
+                cmbProvince.getValue(),
+                txtPostalCode.getText()
+        );
+
+        customerControllerService.updateCustomerDetails(customer);
+        loadCustomerDetails();
     }
 
     @FXML
@@ -132,6 +151,19 @@ public class CustomerFormController implements Initializable {
     @FXML
     public void btnDeleteOnClick(ActionEvent actionEvent) {
 
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Thogakade","root","1234");
+            PreparedStatement pstm = connection.prepareStatement("DELETE FROM customer WHERE CustID = ?");
+
+            pstm.setObject(1, txtCustId.getText());
+
+            pstm.executeUpdate();
+
+            loadCustomerDetails();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
@@ -146,7 +178,6 @@ public class CustomerFormController implements Initializable {
         cmbTitle.setItems(titles);
         cmbProvince.setItems(provinces);
 
-
         colCustId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colCustTitle.setCellValueFactory(new PropertyValueFactory<>("title"));
         colCustName.setCellValueFactory(new PropertyValueFactory<>("name"));
@@ -158,5 +189,20 @@ public class CustomerFormController implements Initializable {
         colPostalCode.setCellValueFactory(new PropertyValueFactory<>("postalCode"));
 
         loadCustomerDetails();
+
+        tblCustManagement.getSelectionModel().selectedItemProperty().addListener((observableValue, oldValue, newValue) -> {
+            if(newValue !=null){
+                txtCustId.setText(String.valueOf(newValue.getId()));
+                cmbTitle.setValue(String.valueOf(newValue.getTitle()));
+                txtCustName.setText(String.valueOf(newValue.getName()));
+                dpDob.setValue(newValue.getDob());
+                txtSalary.setText(String.valueOf(newValue.getSalary()));
+                txtAddress.setText(String.valueOf(newValue.getAddress()));
+                txtCity.setText(String.valueOf(newValue.getCity()));
+                cmbProvince.setValue(String.valueOf(newValue.getProvince()));
+                txtPostalCode.setText(String.valueOf(newValue.getPostalCode()));
+
+            }
+        });
     }
 }
