@@ -16,6 +16,10 @@ import model.Customer;
 import model.Item;
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class ItemFormController implements Initializable {
@@ -100,11 +104,31 @@ public class ItemFormController implements Initializable {
     @FXML
     void btnDeleteOnClick(ActionEvent event) {
 
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Thogakade","root","1234");
+            PreparedStatement pstm = connection.prepareStatement("DELETE FROM item WHERE ItemCode = ?");
+
+            pstm.setObject(1, txtItemCode.getText());
+            pstm.executeUpdate();
+
+            loadItemDetails();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
     void btnUpdateOnClick(ActionEvent event) {
-
+        Item item = new Item(
+                txtItemCode.getText(),
+                txtDescription.getText(),
+                txtPackSize.getText(),
+                Double.parseDouble(txtUnitPrice.getText()),
+                Integer.parseInt(txtQty.getText())
+        );
+        itemControllerService.updateItemDetails(item);
+        loadItemDetails();
     }
 
     @Override
@@ -117,5 +141,15 @@ public class ItemFormController implements Initializable {
         colQty.setCellValueFactory(new PropertyValueFactory<>("qty"));
 
         loadItemDetails();
+
+        tblItemManage.getSelectionModel().selectedItemProperty().addListener((observableValue, oldValue, newValue) -> {
+            if(newValue !=null){
+                txtItemCode.setText(String.valueOf(newValue.getCode()));
+                txtDescription.setText(String.valueOf(newValue.getDescription()));
+                txtPackSize.setText(String.valueOf(newValue.getPackSize()));
+                txtUnitPrice.setText(String.valueOf(newValue.getUnitPrice()));
+                txtQty.setText(String.valueOf(newValue.getQty()));
+            }
+        });
     }
 }

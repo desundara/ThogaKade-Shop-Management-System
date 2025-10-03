@@ -34,12 +34,37 @@ public class ItemController implements ItemControllerService {
 
     @Override
     public void updateItemDetails(Item item) {
+        String SQL = "UPDATE item SET Description = ?, PackSize = ?, UnitPrice = ?, QtyOnHand = ? WHERE ItemCode = ?";
 
+        try (Connection connection = DBConnection.getInstance().getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(SQL)) {
+
+            preparedStatement.setString(1, item.getDescription());
+            preparedStatement.setString(2, item.getPackSize());
+            preparedStatement.setObject(3, item.getUnitPrice());
+            preparedStatement.setDouble(4, item.getQty());
+            preparedStatement.setString(5, item.getCode());
+
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
     public void deleteItemDetails(Item item) {
+        String SQL = "DELETE FROM item WHERE ItemCode = ?;";
 
+        try (Connection connection = DBConnection.getInstance().getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(SQL)) {
+
+            preparedStatement.setString(1, item.getCode());
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override

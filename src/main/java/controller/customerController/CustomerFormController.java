@@ -156,7 +156,6 @@ public class CustomerFormController implements Initializable {
             PreparedStatement pstm = connection.prepareStatement("DELETE FROM customer WHERE CustID = ?");
 
             pstm.setObject(1, txtCustId.getText());
-
             pstm.executeUpdate();
 
             loadCustomerDetails();
