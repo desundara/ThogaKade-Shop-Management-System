@@ -4,7 +4,7 @@ package controller.customerController;
 import db.DBConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import model.Customer;
+import model.dto.Customer;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -1,7 +1,7 @@
 package controller.itemController;
 
 import javafx.collections.ObservableList;
-import model.Item;
+import model.dto.Item;
 
 public interface ItemControllerService {
 

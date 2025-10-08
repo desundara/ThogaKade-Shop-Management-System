@@ -3,8 +3,7 @@ package controller.itemController;
 import db.DBConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import model.Customer;
-import model.Item;
+import model.dto.Item;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -1,7 +1,5 @@
 package controller.itemController;
 
-import controller.customerController.CustomerController;
-import controller.customerController.CustomerControllerService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -12,8 +10,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import model.Customer;
-import model.Item;
+import model.dto.Item;
 
 import java.net.URL;
 import java.sql.Connection;
