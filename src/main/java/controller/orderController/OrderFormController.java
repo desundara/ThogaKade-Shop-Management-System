@@ -73,7 +73,9 @@ public class OrderFormController implements Initializable {
 
     @FXML
     void btnClearOnAction(ActionEvent event) {
-
+        txtOrderId.setText(null);
+        dpOrderDate.setValue(null);
+        txtCustomerId.setText(null);
     }
 
     @FXML

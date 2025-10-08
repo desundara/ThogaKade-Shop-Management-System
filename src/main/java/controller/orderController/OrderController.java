@@ -3,7 +3,6 @@ package controller.orderController;
 import db.DBConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import model.dto.Item;
 import model.dto.Order;
 
 import java.sql.Connection;
@@ -13,8 +12,8 @@ import java.sql.SQLException;
 
 public class OrderController implements OrderControllerService {
 
-    public void addIOrderDetails(Order order) {
-        String SQL = "INSERT INTO orders (OrderID, OrderDate, CustID) VALUES(?,?,?);";
+    public void addOrderDetails(Order order) {
+        String SQL = "INSERT INTO orders(OrderID, OrderDate, CustID) VALUES(?,?,?);";
 
         try (Connection connection = DBConnection.getInstance().getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(SQL)) {
@@ -28,11 +27,6 @@ public class OrderController implements OrderControllerService {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    @Override
-    public void addOrderDetails(Order order) {
-
     }
 
     @Override
