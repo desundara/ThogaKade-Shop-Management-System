@@ -99,7 +99,7 @@ public class CustomerFormController implements Initializable {
     }
 
     @FXML
-    public void btnAddOnClick(ActionEvent actionEvent) {
+    public void btnAddOnAction(ActionEvent actionEvent) {
         Customer customer = new Customer(
                 txtCustId.getText(),
                 cmbTitle.getValue(),
@@ -117,7 +117,7 @@ public class CustomerFormController implements Initializable {
     }
 
     @FXML
-    public void btnUpdateOnClick(ActionEvent actionEvent) {
+    public void btnUpdateOnAction(ActionEvent actionEvent) {
 
         Customer customer = new Customer(
                 txtCustId.getText(),
@@ -136,7 +136,7 @@ public class CustomerFormController implements Initializable {
     }
 
     @FXML
-    public void btnClearOnClick(ActionEvent actionEvent) {
+    public void btnClearOnAction(ActionEvent actionEvent) {
         txtCustId.setText(null);
         cmbTitle.getSelectionModel().clearSelection();
         txtCustName.setText(null);
@@ -149,7 +149,7 @@ public class CustomerFormController implements Initializable {
     }
 
     @FXML
-    public void btnDeleteOnClick(ActionEvent actionEvent) {
+    public void btnDeleteOnAction(ActionEvent actionEvent) {
 
         try {
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Thogakade","root","1234");

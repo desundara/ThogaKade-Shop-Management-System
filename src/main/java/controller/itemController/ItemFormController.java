@@ -76,7 +76,7 @@ public class ItemFormController implements Initializable {
     }
 
     @FXML
-    void btnAddOnClick(ActionEvent event) {
+    void btnAddOnAction(ActionEvent event) {
         Item item = new Item(
                 txtItemCode.getText(),
                 txtDescription.getText(),
@@ -90,7 +90,7 @@ public class ItemFormController implements Initializable {
     }
 
     @FXML
-    void btnClearOnClick(ActionEvent event) {
+    void btnClearOnAction(ActionEvent event) {
         txtItemCode.setText(null);
         txtDescription.setText(null);
         txtPackSize.setText(null);
@@ -99,7 +99,7 @@ public class ItemFormController implements Initializable {
     }
 
     @FXML
-    void btnDeleteOnClick(ActionEvent event) {
+    void btnDeleteOnAction(ActionEvent event) {
 
         try {
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Thogakade","root","1234");
@@ -116,7 +116,7 @@ public class ItemFormController implements Initializable {
     }
 
     @FXML
-    void btnUpdateOnClick(ActionEvent event) {
+    void btnUpdateOnAction(ActionEvent event) {
         Item item = new Item(
                 txtItemCode.getText(),
                 txtDescription.getText(),

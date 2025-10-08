@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="648.0" prefWidth="899.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.itemController.ItemFormController">
    <children>
-      <Label layoutX="355.0" layoutY="32.0" prefHeight="36.0" prefWidth="268.0" text="Item Management" textFill="#42a5f5">
+      <Label layoutX="311.0" layoutY="27.0" prefHeight="36.0" prefWidth="350.0" text="Item Management Form" textFill="#42a5f5">
          <font>
             <Font name="Bell MT Bold" size="30.0" />
          </font>
@@ -56,10 +56,10 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Button fx:id="btnAdd" layoutX="23.0" layoutY="324.0" mnemonicParsing="false" onAction="#btnAddOnClick" prefHeight="25.0" prefWidth="59.0" style="-fx-background-color: #004aad;" text="ADD" textFill="WHITE" />
-            <Button fx:id="btnUpdate" layoutX="118.0" layoutY="324.0" mnemonicParsing="false" onAction="#btnUpdateOnClick" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #004aad;" text="UPDATE" textFill="WHITE" />
-            <Button fx:id="btnDelete" layoutX="220.0" layoutY="324.0" mnemonicParsing="false" onAction="#btnDeleteOnClick" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: #004aad;" text="DELETE" textFill="WHITE" />
-            <Button fx:id="btnClear" layoutX="310.0" layoutY="324.0" mnemonicParsing="false" onAction="#btnClearOnClick" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: #004aad;" text="CLEAR" textFill="WHITE" />
+            <Button fx:id="btnAdd" layoutX="23.0" layoutY="324.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="25.0" prefWidth="59.0" style="-fx-background-color: #004aad;" text="ADD" textFill="WHITE" />
+            <Button fx:id="btnUpdate" layoutX="118.0" layoutY="324.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #004aad;" text="UPDATE" textFill="WHITE" />
+            <Button fx:id="btnDelete" layoutX="220.0" layoutY="324.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: #004aad;" text="DELETE" textFill="WHITE" />
+            <Button fx:id="btnClear" layoutX="310.0" layoutY="324.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: #004aad;" text="CLEAR" textFill="WHITE" />
             <TextField fx:id="txtItemCode" layoutX="143.0" layoutY="34.0" prefHeight="25.0" prefWidth="230.0" />
             <TextField fx:id="txtDescription" layoutX="145.0" layoutY="85.0" prefHeight="25.0" prefWidth="230.0" />
             <TextField fx:id="txtUnitPrice" layoutX="145.0" layoutY="196.0" prefHeight="25.0" prefWidth="230.0" />

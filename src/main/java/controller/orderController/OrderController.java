@@ -30,6 +30,39 @@ public class OrderController implements OrderControllerService {
     }
 
     @Override
+    public void updateOrderDetails(Order order) {
+        String SQL = "UPDATE orders SET OrderDate = ?, CustID = ? WHERE OrderID = ?";
+
+        try (Connection connection = DBConnection.getInstance().getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(SQL)) {
+
+            preparedStatement.setString(1, String.valueOf(order.getDate()));
+            preparedStatement.setObject(2, order.getCustomerId());
+            preparedStatement.setString(3, order.getId());
+
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public void deleteOrderDetails(Order order) {
+            String SQL = "DELETE FROM orders WHERE OrderID = ?;";
+
+            try (Connection connection = DBConnection.getInstance().getConnection();
+                 PreparedStatement preparedStatement = connection.prepareStatement(SQL)) {
+
+                preparedStatement.setString(1, order.getId());
+                preparedStatement.executeUpdate();
+
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+    @Override
     public ObservableList<Order> getAllOrderDetails() {
 
         ObservableList<Order> orderList = FXCollections.observableArrayList();
@@ -52,10 +85,5 @@ public class OrderController implements OrderControllerService {
             throw new RuntimeException(e);
         }
         return orderList;
-    }
-
-    @Override
-    public Order getOrderDetails() {
-        return null;
     }
 }

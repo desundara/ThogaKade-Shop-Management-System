@@ -7,9 +7,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import model.dto.Item;
 import model.dto.Order;
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 
@@ -80,12 +85,29 @@ public class OrderFormController implements Initializable {
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Thogakade","root","1234");
+            PreparedStatement pstm = connection.prepareStatement("DELETE FROM orders WHERE OrderID = ?");
 
+            pstm.setObject(1, txtOrderId.getText());
+            pstm.executeUpdate();
+
+            loadOrderDetails();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
     void btnUpdateOnAction(ActionEvent event) {
-
+        Order order = new Order(
+                txtOrderId.getText(),
+                dpOrderDate.getValue(),
+                txtCustomerId.getText()
+        );
+        orderControllerService.updateOrderDetails(order);
+        loadOrderDetails();
     }
 
     @Override
@@ -106,4 +128,5 @@ public class OrderFormController implements Initializable {
         });
     }
 }
+
 

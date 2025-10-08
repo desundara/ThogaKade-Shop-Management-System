@@ -7,7 +7,11 @@ import model.dto.Order;
 public interface OrderControllerService {
 
     void addOrderDetails(Order order);
+    void updateOrderDetails(Order order);
+    default void deleteOrderDetails(Order order) {
+
+    }
+
     ObservableList<Order> getAllOrderDetails();
 
-    Order getOrderDetails();
 }

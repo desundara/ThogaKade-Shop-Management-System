@@ -15,7 +15,7 @@
 
 <AnchorPane prefHeight="636.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.customerController.CustomerFormController">
    <children>
-      <Label layoutX="284.0" layoutY="26.0" prefHeight="36.0" prefWidth="318.0" text="Customer Management" textFill="#42a5f5">
+      <Label layoutX="242.0" layoutY="25.0" prefHeight="36.0" prefWidth="402.0" text="Customer Management Form" textFill="#42a5f5">
          <font>
             <Font name="Bell MT Bold" size="30.0" />
          </font>
@@ -93,22 +93,22 @@
                                     <Font name="SansSerif Bold" size="16.0" />
                                  </font>
                               </Label>
-                              <Button fx:id="btnAdd" layoutX="46.0" layoutY="426.0" mnemonicParsing="false" onAction="#btnAddOnClick" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #004aad;" text="ADD" textFill="WHITE">
+                              <Button fx:id="btnAdd" layoutX="46.0" layoutY="426.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #004aad;" text="ADD" textFill="WHITE">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="btnUpdate" layoutX="169.0" layoutY="426.0" mnemonicParsing="false" onAction="#btnUpdateOnClick" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #004aad;" text="UPDATE" textFill="WHITE">
+                              <Button fx:id="btnUpdate" layoutX="169.0" layoutY="426.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #004aad;" text="UPDATE" textFill="WHITE">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="btnClear" layoutX="417.0" layoutY="426.0" mnemonicParsing="false" onAction="#btnClearOnClick" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #004aad;" text="CLEAR" textFill="WHITE">
+                              <Button fx:id="btnClear" layoutX="417.0" layoutY="426.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #004aad;" text="CLEAR" textFill="WHITE">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="btnDelete" layoutX="289.0" layoutY="426.0" mnemonicParsing="false" onAction="#btnDeleteOnClick" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #004aad;" text="DELETE" textFill="WHITE">
+                              <Button fx:id="btnDelete" layoutX="289.0" layoutY="426.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #004aad;" text="DELETE" textFill="WHITE">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
