@@ -14,7 +14,7 @@ public class DashboardFormController {
     Stage orderDetailManagement = new Stage();
 
     @FXML
-    public void btnCustManageOnClick(ActionEvent actionEvent) {
+    public void btnCustManageOnAction(ActionEvent actionEvent) {
 
         try {
             customerManagement.setScene(
@@ -27,7 +27,7 @@ public class DashboardFormController {
         customerManagement.show();
     }
 
-    public void btnItemManageOnClick(ActionEvent actionEvent) {
+    public void btnItemManageOnAction(ActionEvent actionEvent) {
 
         try {
             itemManagement.setScene(
@@ -40,11 +40,19 @@ public class DashboardFormController {
         itemManagement.show();
     }
 
-    public void btnOrderManageOnClick(ActionEvent actionEvent) {
-
+    public void btnOrderManageOnAction(ActionEvent actionEvent) {
+        try {
+            orderManagement.setScene(
+                    new Scene(FXMLLoader.load(getClass().getResource("/view/OrderManagement.fxml")))
+            );
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        orderManagement.setResizable(false);
+        orderManagement.show();
     }
 
-    public void btnOrderDetailManageOnClick(ActionEvent actionEvent) {
+    public void btnOrderDetailManageOnAction(ActionEvent actionEvent) {
 
     }
 }
