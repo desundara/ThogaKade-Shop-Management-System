@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="656.0" prefWidth="938.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.itemController.ItemFormController">
+<AnchorPane prefHeight="656.0" prefWidth="938.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.orderController.OrderController">
    <children>
-      <Label layoutX="355.0" layoutY="32.0" prefHeight="36.0" prefWidth="268.0" text="Order Management" textFill="#42a5f5">
+      <Label layoutX="309.0" layoutY="33.0" prefHeight="36.0" prefWidth="358.0" text="Order Management Form" textFill="#42a5f5">
          <font>
             <Font name="Bell MT Bold" size="30.0" />
          </font>
